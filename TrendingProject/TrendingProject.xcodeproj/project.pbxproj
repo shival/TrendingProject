@@ -15,6 +15,8 @@
 		8035529A212B7BF1007A5961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80355298212B7BF1007A5961 /* LaunchScreen.storyboard */; };
 		803552A4212B7C7B007A5961 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803552A2212B7C7A007A5961 /* Webservice.swift */; };
 		803552A5212B7C7B007A5961 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803552A3212B7C7B007A5961 /* Alert.swift */; };
+		80BA8CB5212CCA5E0086526E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA8CB4212CCA5E0086526E /* DetailViewController.swift */; };
+		80BA8CBA212CDAEC0086526E /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BA8CB9212CDAEC0086526E /* CachedImageView.swift */; };
 		80C87CEE212B8359006FFA1C /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C87CED212B8359006FFA1C /* ProjectsViewModel.swift */; };
 		80DD1F14212B93C200A40D88 /* ProjectListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DD1F13212B93C200A40D88 /* ProjectListCell.swift */; };
 		80F9F7A5212B802E00CE8A41 /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9F7A4212B802E00CE8A41 /* ProjectsModel.swift */; };
@@ -32,6 +34,8 @@
 		8035529B212B7BF1007A5961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		803552A2212B7C7A007A5961 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		803552A3212B7C7B007A5961 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		80BA8CB4212CCA5E0086526E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		80BA8CB9212CDAEC0086526E /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		80C87CED212B8359006FFA1C /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		80DD1F13212B93C200A40D88 /* ProjectListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListCell.swift; sourceTree = "<group>"; };
 		80F9F7A4212B802E00CE8A41 /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
@@ -79,12 +83,13 @@
 		8035528E212B7BEE007A5961 /* TrendingProject */ = {
 			isa = PBXGroup;
 			children = (
+				80BA8CBB212CE7900086526E /* ViewController */,
+				80BA8CB6212CCB310086526E /* Extension */,
 				80DD1F10212B937A00A40D88 /* CustomCell */,
 				80C87CEC212B8343006FFA1C /* ViewModel */,
 				80F9F7A3212B801800CE8A41 /* Model */,
 				803552A1212B7C5F007A5961 /* Utility */,
 				8035528F212B7BEE007A5961 /* AppDelegate.swift */,
-				80355291212B7BEE007A5961 /* ProjectListViewController.swift */,
 				80355293212B7BEE007A5961 /* Main.storyboard */,
 				80355296212B7BF1007A5961 /* Assets.xcassets */,
 				80355298212B7BF1007A5961 /* LaunchScreen.storyboard */,
@@ -100,6 +105,23 @@
 				803552A2212B7C7A007A5961 /* Webservice.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		80BA8CB6212CCB310086526E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				80BA8CB9212CDAEC0086526E /* CachedImageView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		80BA8CBB212CE7900086526E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80355291212B7BEE007A5961 /* ProjectListViewController.swift */,
+				80BA8CB4212CCA5E0086526E /* DetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		80C87CEC212B8343006FFA1C /* ViewModel */ = {
@@ -272,6 +294,8 @@
 				803552A5212B7C7B007A5961 /* Alert.swift in Sources */,
 				80C87CEE212B8359006FFA1C /* ProjectsViewModel.swift in Sources */,
 				803552A4212B7C7B007A5961 /* Webservice.swift in Sources */,
+				80BA8CBA212CDAEC0086526E /* CachedImageView.swift in Sources */,
+				80BA8CB5212CCA5E0086526E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +442,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TrendingProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Freelancer.TrendingProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -433,7 +460,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TrendingProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Freelancer.TrendingProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

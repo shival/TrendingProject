@@ -13,11 +13,7 @@ class ProjectListCell: UITableViewCell {
     @IBOutlet weak var projectNameLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    
     func configCell(projectItem: ItemData) {
         projectNameLabel.text = projectItem.name
         starCountLabel.text = "Star Count: \(projectItem.stargazers_count ?? 0)"
