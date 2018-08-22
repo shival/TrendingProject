@@ -1,4 +1,2 @@
-# TrendingProject
-
-# Note
+# Note:
   Run pod install before compiling the app.
